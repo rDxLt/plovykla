@@ -10,7 +10,7 @@
     </ul>
 @endif
 
-{{session('message')}}
+{{ session('message') }}
 
 <form action="{{ route('subscribe') }}" method="post">
     @csrf
