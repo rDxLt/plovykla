@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateSubscriberRequest;
+use App\Models\Subscriber;
 
 class HomeController extends Controller
 {
@@ -13,6 +14,9 @@ class HomeController extends Controller
 
     public function subscribe(CreateSubscriberRequest $request)
     {
-        dd($request->validated());
+        $data = $request->validated();
+        Subscriber::create($data);
+
+        dd('issaugota');
     }
 }
