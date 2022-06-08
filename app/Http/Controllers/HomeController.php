@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\CreateSubscriberRequest;
 
 class HomeController extends Controller
 {
@@ -11,8 +11,8 @@ class HomeController extends Controller
         return view('pages.soon');
     }
 
-    public function subscribe(Request $request)
+    public function subscribe(CreateSubscriberRequest $request)
     {
-        dd($request->all());
+        dd($request->validated());
     }
 }
