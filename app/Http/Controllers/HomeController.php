@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateSubscriberRequest;
 use App\Models\Subscriber;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -17,6 +18,6 @@ class HomeController extends Controller
         $data = $request->validated();
         Subscriber::create($data);
 
-        dd('issaugota');
+        return Redirect::back()->with('message', 'Sėkmingai užsiprenumeravote');
     }
 }
