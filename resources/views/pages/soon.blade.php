@@ -2,7 +2,8 @@
 <p>
     Gauk pranešiąm kai startuosim!
 </p>
-<form>
+<form action="{{ route('subscribe') }}" method="post">
+    @csrf
     <input type="text" name="email">
     <input type="submit" value="Pranešti">
 </form>

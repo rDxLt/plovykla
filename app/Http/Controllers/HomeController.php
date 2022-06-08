@@ -10,4 +10,9 @@ class HomeController extends Controller
     {
         return view('pages.soon');
     }
+
+    public function subscribe(Request $request)
+    {
+        dd($request->all());
+    }
 }
